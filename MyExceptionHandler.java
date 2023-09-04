@@ -26,7 +26,7 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler
 	public ResponseEntity<String> ListNotFoundException()
     {
 		log.error("ListNotFoundException::Please check");
-		return new ResponseEntity<String>("List is empty",HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<String>("Empty List",HttpStatus.BAD_REQUEST);
 	}
 	
 	@ExceptionHandler(EmptyListException.class)
